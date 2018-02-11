@@ -7,6 +7,7 @@ Getting and Cleaning Data Programming Assignment
 >fileURL="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
 >download.file(fileURL,destfile="./Dataset.zip")
+
 >unzip(zipfile="./Dataset.zip",exdir="./Data")
 
 #PART 1_MERGE THE TRAINING TEST AND TEST TEST TO CREATE ONE DATA SET
