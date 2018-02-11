@@ -50,9 +50,11 @@ Getting and Cleaning Data Programming Assignment
 #PART 2_EXTRACTS ONLY THE MEASUREMENTS ON THE MEAN AND STANDARD DEVIATION FOR EACH MEASUREMENT
 
 #find values of mean or standard deviation
->meanstd<-grep("mean\\(\\)|std\\(\\)", features[,2])
+>meanstd<-grep("mean\\(\\)|std\\(\\)", features$V2,value=TRUE)
 
->set<-set[,index]
+>meanstd<-union(c("subject","activity"),meanstd)
+
+>mergeddata<-subset(mergeddata,select=meanstd)
 
 
 #PART 3_USES DESCRIPTIVE ACTIVITY NAMES TO NAME THE ACTIVITIES IN THE DATA SET
